@@ -1,0 +1,50 @@
+.home{
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1{
+        font-family:"Anton", sans-serif;
+        font-size: 5rem;
+        font-weight: 700;
+    }
+    p{
+        font-size: 1.900rem;
+        font-family: "EB Garamond", serif;
+    }
+    button{
+        background-color: blue;
+        text-align: center;
+        padding: 1.875rem 5rem;
+        cursor: pointer;
+        color: white;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        transition: all 1s;
+        
+
+
+        &::before{
+            content: "";
+            top: 0;
+            left: -24px;
+            width: 0%;
+            height: 180%;
+            position: absolute;
+            background-color: green;
+            z-index: -1;
+            transform: skew(45deg);
+            transition: all 1s;
+        }
+        &:hover{
+            background-color: transparent;
+        }
+        &:hover::before{
+            width: 150%;
+        }
+    }
+}
